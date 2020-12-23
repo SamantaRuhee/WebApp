@@ -1,17 +1,42 @@
 import React from 'react';
+import BookDetail from './components/BookDetail';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import faker from 'faker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const BookList = [
+  {
+    ID: 1,
+    ImageSource:faker.image.image(200,300,true),
+    title:"The Zahir",
+    author:"Paulo Coelho",
+  },
+  {
+    ID: 2,
+    ImageSource:faker.image.image(200,300,true),
+    title:"The Kite Runner",
+    author:"Khaled Hosseini",
+  },
+];
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return(
+  <div>
+    {BookList.map((Books)=>{return(
+      <BookDetail
+      ImageSource={Books.ImageSource}
+      author={Books.author}
+      title={Books.title}
+      />
+    )})}
+    <button
+    onClick={()=>{
+      alert("Hi!");
+    }}
+    >
+      Click me!!
+    </button>
+  </div>
+  );
+};
+
+ReactDOM.render(<App/>,document.getElementById("root"));
