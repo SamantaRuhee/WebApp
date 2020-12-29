@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from "@fortawesome/free-solid-svg-icons";
-import Searchbar from './Searchbar';
+import SearchBar from './SearchBar';
 import getBookData from '../api/Bookapi';
-import Booklist from './Booklist'
+import BookList from './BookList'
 import Pagination from './Pagination'
 
 
@@ -88,8 +88,8 @@ function Books() {
         </header>
         </div>
      </nav>
-      <Searchbar handleSearch = {handleSearch} handleSubmit = {handleSubmit} handleSort = {handleSort} sort = {sort}></Searchbar>
-      <Booklist books = {books}></Booklist>
+      <SearchBar handleSearch = {handleSearch} handleSubmit = {handleSubmit} handleSort = {handleSort} sort = {sort}></SearchBar>
+      <BookList books = {books}></BookList>
       {totalPages > 1? (
       <Pagination 
       nextPage = {nextPage}

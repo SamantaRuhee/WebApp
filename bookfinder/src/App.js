@@ -1,5 +1,6 @@
 import React from 'react';
 import Books from './components/Books';
+import BookDetails from './components/BookDetails';
 import { BrowserRouter, Link, Route  } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <BrowserRouter>
       <div>
         <Route path = "/" exact = {true} component ={Books}/>
+        <Route path = "/bookDetails/:title" exact = {true} component = {BookDetails}/>
       </div>
       </BrowserRouter>
     </div>

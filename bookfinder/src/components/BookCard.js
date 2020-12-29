@@ -2,12 +2,9 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-function Bookcard(props) {
+function BookCard(props) {
    
   return (
-    
-  
- 
     <div className="card medium">
       <div className="card-image">
         <img src={props.image} />
@@ -30,4 +27,4 @@ function Bookcard(props) {
   );
 }
 
-export default Bookcard;
+export default BookCard;

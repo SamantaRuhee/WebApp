@@ -1,8 +1,8 @@
 import React from 'react';
-import Bookcard from './Bookcard'
+import BookCard from './BookCard'
 
 
-function Booklist(props) {
+function BookList(props) {
   return (
     <div className = "container">
         <div className = "row">
@@ -11,7 +11,7 @@ function Booklist(props) {
                     console.log(book);
                     return(
                     <div  className = "col s3 m3">
-                        <Bookcard
+                        <BookCard
                             key = {index}
                             image = {book.volumeInfo.imageLinks.thumbnail}
                             title = {book.volumeInfo.title}
@@ -20,7 +20,7 @@ function Booklist(props) {
                             description = {book.volumeInfo.description}
                             props = {props}
                            
-                        ></Bookcard>
+                        ></BookCard>
                     </div>);
                 })}
             </div>
@@ -30,4 +30,4 @@ function Booklist(props) {
   );
 }
 
-export default Booklist;
+export default BookList;

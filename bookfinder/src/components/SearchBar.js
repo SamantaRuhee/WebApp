@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 
 
-function Searchbar(props) {
+function SearchBar(props) {
   return (
     <div className = "container">
       <div className = "row">     
@@ -32,4 +32,4 @@ function Searchbar(props) {
   );
 }
 
-export default Searchbar;
+export default SearchBar;
