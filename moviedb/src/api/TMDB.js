@@ -8,7 +8,8 @@ const getMoviesByTerm=(SearchTerm, setMovies, page_number, setTotalPages)=>{
     TMDB.get("/search/movie",{
         params:{
            api_key: "3b6eb5e28f2263eca2ae0abaa40e5b12",
-           query: SearchTerm, 
+           query: SearchTerm,
+           page: page_number, 
         },
     }).then((response)=>{
       console.log(response.data);
