@@ -4,13 +4,11 @@ import BookCard from './BookCard'
 
 function BookList(props) {
   return (
-    <div className = "container">
+    <div className = "container-fluid d-flex justify-content-center">
         <div className = "row">
-            <div className = "col s12">
+            <div className = "col-md-4">
                 {props.books.map((book, index)=>{
-                    console.log(book);
                     return(
-                    <div  className = "col s3 m3">
                         <BookCard
                             key = {index}
                             image = {book.volumeInfo.imageLinks.thumbnail}
@@ -21,7 +19,7 @@ function BookList(props) {
                             props = {props}
                            
                         ></BookCard>
-                    </div>);
+                    );
                 })}
             </div>
         </div>

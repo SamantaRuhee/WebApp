@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, ButtonGroup } from 'semantic-ui-react';
 
 
 function SearchBar(props) {
@@ -8,13 +8,14 @@ function SearchBar(props) {
       <div className = "row">     
         <section className = "col  s6 offset-s4">
           <form action = "" onSubmit = {props.handleSubmit}>
-          <div className="col s6 ">
-            <input placeholder = "Search for Book" type = "text" onChange = {props.handleSearch}></input>
+          <div className="col s6 " style={{backgroundColor:'white'}}>
+            <input placeholder = "Search for Book" 
+            type = "text" 
+            onChange = {props.handleSearch}/>
           </div>  
-          <div className="col s3 ">
-            <Button inverted color='black' type = "submit">submit</Button>
+          <div className="col s3 r3">
+            <Button color='white' type = "submit" >submit</Button>
           </div>
-          
           <div className="col s3 pull-s1">
             <select color = "black"  className="browser-default dropdown select-css" defaultValue = "Sort" onChange = {props.handleSort}>
               <option disabled value = "Sort">Sort</option>
@@ -24,7 +25,6 @@ function SearchBar(props) {
               <option value = "Descending">Z-A</option>
             </select>
           </div> 
-          
           </form>
         </section>
       </div>

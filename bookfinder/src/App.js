@@ -1,6 +1,7 @@
 import React from 'react';
 import Books from './components/Books';
 import BookDetails from './components/BookDetails';
+import '../src/styles/App.css'
 import { BrowserRouter, Link, Route  } from "react-router-dom";
 
 function App() {

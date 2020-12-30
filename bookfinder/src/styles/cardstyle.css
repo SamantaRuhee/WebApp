@@ -1,0 +1,23 @@
+body{
+    background-image: src();
+}
+
+.card{
+    width: 20rem;
+    height: 30rem;
+}
+
+.card:hover{
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253);
+}
+.card-body{
+    padding: 3rem 0!important;
+}
+
+.card-text{
+    font-size: .9rem;
+    padding: 0.4rem;
+}
+.container-fluid{
+    padding-top: 1rem;
+}

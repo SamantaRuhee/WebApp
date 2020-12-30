@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from './SearchBar';
+import NavBar from './NavBar'
 import getBookData from '../api/Bookapi';
 import BookList from './BookList'
 import Pagination from './Pagination'
@@ -81,13 +82,7 @@ function Books() {
   
   return (
     <div >
-      <nav style = {{height : 90}}>
-        <div className="nav-wrapper black lighten-1 "  >
-        <header>
-                <h1 className = "brand-logo center" style = {{color:"lightgreen" }}><FontAwesomeIcon icon = {faBook}/>Bookie</h1>
-        </header>
-        </div>
-     </nav>
+      <NavBar />
       <SearchBar handleSearch = {handleSearch} handleSubmit = {handleSubmit} handleSort = {handleSort} sort = {sort}></SearchBar>
       <BookList books = {books}></BookList>
       {totalPages > 1? (
