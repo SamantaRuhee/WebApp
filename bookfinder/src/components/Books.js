@@ -1,6 +1,4 @@
 import React, { useState,useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from './SearchBar';
 import NavBar from './NavBar'
 import getBookData from '../api/Bookapi';
